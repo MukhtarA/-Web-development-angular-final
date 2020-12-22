@@ -5,9 +5,9 @@
                [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Микрорубрики</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item href="#">Анекдот дня</a>
+      <a mat-list-item href="#">Фильм дня</a>
+      <a mat-list-item href="#">Книга дня</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content class="main-header">
@@ -41,11 +41,24 @@
             </a>
           </li>
         </ul>
-      </nav>
 
+      </nav>
       <span class="modeSwitch">
         <mat-slide-toggle (change)="onDarkModeSwitched($event)"></mat-slide-toggle>
       </span>
+
+      <div class="user-div-button">
+        <p>
+          <button class="user-button" mat-button (click)="sidenav.toggle()"><img src="assets/images/user.png"></button>
+        </p>
+      </div>
     </mat-toolbar>
   </mat-sidenav-content>
+  <mat-sidenav-content>
+    <!--Здесь контент дашборда-->
+    <app-dashboard></app-dashboard>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+
+
 </mat-sidenav-container>

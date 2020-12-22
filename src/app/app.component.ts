@@ -11,7 +11,7 @@ export class AppComponent implements OnInit{
   constructor(@Inject(DOCUMENT) private document: Document, private renderer: Renderer2 ) {}
 
   ngOnInit() {
-    this.renderer.setAttribute(this.document.body, 'class', 'theme-dark')
+    this.renderer.setAttribute(this.document.body, 'class', 'theme-light')
   }
 
   switchMode(isDarkMode: boolean){
