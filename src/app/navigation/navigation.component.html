@@ -1,0 +1,51 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" class="sidenav" fixedInViewport
+               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+               [mode]="(isHandset$ | async) ? 'over' : 'side'"
+               [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Микрорубрики</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="main-header">
+    <mat-toolbar color="primary">
+      <div class="sidebar-div-button">
+        <p>
+          <button class="sidebar-button" mat-button (click)="sidenav.toggle()"><img src="assets/images/logo.png"></button>
+        </p>
+      </div>
+
+      <nav class="header-nav-main">
+        <ul class="header-nav-main-list">
+          <li class="header-nav-main-item">
+            <a class="header-nav-main-link" href="">
+              <button mat-button>Курсы</button>
+            </a>
+          </li>
+          <li class="header-nav-main-item">
+            <a class="header-nav-main-link" href="">
+              <button mat-button>Журнал</button>
+            </a>
+          </li>
+          <li class="header-nav-main-item">
+            <a class="header-nav-main-link" href="">
+              <button mat-button>Детская комната</button>
+            </a>
+          </li>
+          <li class="header-nav-main-item">
+            <a class="header-nav-main-link" href="">
+              <button mat-button>Радио</button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <span class="modeSwitch">
+        <mat-slide-toggle (change)="onDarkModeSwitched($event)"></mat-slide-toggle>
+      </span>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
