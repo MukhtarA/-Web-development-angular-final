@@ -17,6 +17,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FooterComponent } from './footer/footer.component';
+import { CoursePageComponent } from './course-page/course-page.component';
+import { CourseDashboardComponent } from './course-dashboard/course-dashboard.component';
+import { ArticleComponent } from './article/article.component';
 
 
 @NgModule({
@@ -25,6 +28,9 @@ import { FooterComponent } from './footer/footer.component';
     NavigationComponent,
     DashboardComponent,
     FooterComponent,
+    CoursePageComponent,
+    CourseDashboardComponent,
+    ArticleComponent,
 
   ],
   imports: [

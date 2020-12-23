@@ -5,8 +5,8 @@
                [opened]="(isHandset$ | async) === true">
     <mat-toolbar>Микрорубрики</mat-toolbar>
     <mat-nav-list>
-      <a routerLink="/main" routerLinkActive="active" mat-list-item href="#">Главная страница</a>
-      <a routerLink="/courses" routerLinkActive="active" mat-list-item href="#">Курсы</a>
+      <a routerLink="/"  mat-list-item href="#">Главная страница</a>
+      <a routerLink="/courses" mat-list-item href="#">Курсы</a>
       <a mat-list-item href="#">Фильм дня</a>
       <a mat-list-item href="#">Книга дня</a>
     </mat-nav-list>
@@ -22,7 +22,7 @@
       <nav class="header-nav-main">
         <ul class="header-nav-main-list">
           <li class="header-nav-main-item">
-            <a class="header-nav-main-link" href="/courses">
+            <a [routerLink]="['/courses']" class="header-nav-main-link" href="">
               <button mat-button>Курсы</button>
             </a>
           </li>
@@ -50,14 +50,14 @@
 
       <div class="user-div-button">
         <p>
-          <a routerLink="./login"><button class="user-button" mat-button><img src="assets/images/user.png"></button></a>
+          <button class="user-button" mat-button (click)="sidenav.toggle()"><img src="assets/images/user.png"></button>
         </p>
       </div>
     </mat-toolbar>
   </mat-sidenav-content>
   <mat-sidenav-content>
     <!--Здесь контент дашборда-->
-    <app-dashboard></app-dashboard>
+    <app-course-dashboard></app-course-dashboard>
     <app-footer></app-footer>
   </mat-sidenav-content>
 
