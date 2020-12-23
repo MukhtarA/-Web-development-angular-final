@@ -18,4 +18,6 @@ export class AppComponent implements OnInit{
     const hostClass = isDarkMode ? 'theme-dark' : 'theme-light';
     this.renderer.setAttribute(this.document.body, 'class', hostClass);
   }
+
+
 }

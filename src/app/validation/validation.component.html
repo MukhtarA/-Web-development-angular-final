@@ -1,0 +1,22 @@
+<mat-sidenav-content>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <label>
+      <input type="email" matInput [formControl]="emailFormControl" placeholder="@example.com">
+    </label>
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+    <mat-label>Password</mat-label>
+    <label>
+      <input type="password" matInput >
+    </label>
+  </mat-form-field>
+</form>
+
+</mat-sidenav-content>
+

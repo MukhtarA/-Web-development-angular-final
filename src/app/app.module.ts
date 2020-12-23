@@ -20,6 +20,10 @@ import { FooterComponent } from './footer/footer.component';
 import { CoursePageComponent } from './course-page/course-page.component';
 import { CourseDashboardComponent } from './course-dashboard/course-dashboard.component';
 import { ArticleComponent } from './article/article.component';
+import {SigninComponent} from './auth/containers/signin/login.component';
+import {LoginComponent} from './login/login.component';
+import { ValidationComponent } from './validation/validation.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -31,6 +35,9 @@ import { ArticleComponent } from './article/article.component';
     CoursePageComponent,
     CourseDashboardComponent,
     ArticleComponent,
+    SigninComponent,
+    LoginComponent,
+    ValidationComponent,
 
   ],
   imports: [
@@ -46,7 +53,8 @@ import { ArticleComponent } from './article/article.component';
     MatSlideToggleModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
