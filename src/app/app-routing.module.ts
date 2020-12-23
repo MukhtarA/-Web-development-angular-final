@@ -7,6 +7,7 @@ import {AuthGuard} from './auth/guards/auth.guard';
 import {ArticleComponent} from './article/article.component';
 import {LoginComponent} from './login/login.component';
 import {ValidationComponent} from './validation/validation.component';
+import {UserComponent} from './user/user.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/login' },
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'article', component: ArticleComponent},
   {path: 'login', component: LoginComponent},
   {path: 'validation', component: ValidationComponent},
+  {path: 'user', component: UserComponent}
 ];
 
 @NgModule({
